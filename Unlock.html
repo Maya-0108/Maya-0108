@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unlock Message</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 50px;
+    }
+    #message {
+      display: none;
+      margin-top: 20px;
+      font-size: 18px;
+      color: #333;
+    }
+    input, button {
+      padding: 10px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Enter the Special Code</h1>
+  <input type="text" id="codeInput" placeholder="Enter the date">
+  <button onclick="unlockMessage()">Unlock</button>
+  <div id="message">
+    <p>May 16, 2024, was a day I can call truly special because I never imagined someone could care so deeply for me. Thank you for the overwhelming love—I’m not sure if I deserve it, but it touched my heart in ways I can’t describe. That day, for the second time, my feelings for you became undeniable.</p>
+  </div>
+  <script>
+    function unlockMessage() {
+      const input = document.getElementById('codeInput').value.trim();
+      if (input === "16 May 2024") {
+        document.getElementById('message').style.display = "block";
+      } else {
+        alert("Incorrect code. Please try again.");
+      }
+    }
+  </script>
+</body>
+</html>
